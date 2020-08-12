@@ -1,0 +1,4 @@
+interface first
+{
+	void disp();
+}

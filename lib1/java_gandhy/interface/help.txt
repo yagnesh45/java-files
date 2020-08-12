@@ -1,0 +1,6 @@
+interface : 
+		it contains only abstract method
+		no need to use abstract keyword to declare the methods as an abstract
+		all the methods are public and abstract.
+		we can declare the ref of the interface
+		cant create an object of the interface

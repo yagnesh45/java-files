@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+<hibernate-mapping>
+<class name="one_to_many.College">
+<id name="cid"/>
+<property name="name" />
+<property name="dept"/>
+<set name="stds" >
+	<key column="cid"/>
+<one-to-many class="one_to_many.Student"/>
+</set>
+</class>
+
+<class name="one_to_many.Student">
+<id name="sid"/>
+
+<property name="name"/>
+<property name="mobNo"/>
+</class>
+</hibernate-mapping>

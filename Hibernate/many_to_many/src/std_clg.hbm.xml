@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+<hibernate-mapping>
+<class name="many_to_many.College" table="clg2">
+<id name="cid"/>
+<property name="name" />
+<property name="dept"/>
+</class>
+</hibernate-mapping>

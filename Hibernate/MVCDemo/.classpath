@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_144"/>
+	<classpathentry kind="lib" path="E:/setups/lib/spring_jar/aspectj-DEVELOPMENT-20180312080830.jar"/>
+	<classpathentry kind="lib" path="E:/setups/lib/spring_jar/aspectj-weaver.jar"/>
+	<classpathentry kind="lib" path="E:/setups/lib/spring_jar/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="E:/setups/lib/spring_jar/spring-aop-3.2.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/setups/lib/spring_jar/spring-aop-4.3.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/setups/lib/spring_jar/spring-beans-4.3.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/setups/lib/spring_jar/spring-context-4.3.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/setups/lib/spring_jar/spring-core-4.3.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/setups/lib/spring_jar/spring-expression-4.3.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="E:/setups/lib/spring_jar/spring-web-4.3.9.RELEASE.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

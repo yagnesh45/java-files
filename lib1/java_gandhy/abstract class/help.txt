@@ -1,0 +1,15 @@
+Abstract class
+	property : we cant create the object of abstract class.
+Abstract method
+	def : method having no body is known as Abstract method
+	property : must be override
+Note : the class having at least a single Abstract method 
+must be the abstract class.
+using super keyword we cant access abstract method.
+----------------------------------------------------------
+Abstract class :
+	may be it has no abstract method.
+	it can consist abstract method, non-abstract method,
+	IBs, static IBs, constructor, instance variables,
+	static variables, class.....
+	it always contain a single non - abstract method : constructor

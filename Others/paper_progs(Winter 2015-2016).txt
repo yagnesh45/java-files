@@ -1,0 +1,408 @@
+// Winter 2015
+
+// Que.2(B) - 1
+
+import java.util.Scanner;
+class account_details{
+	String name;
+	long Account_number;
+	String type_of_acc;
+	int balance;
+	
+	account_details(String n,long accNo,String type,int bal){
+		name=n;
+		Account_number=accNo;
+		type_of_acc=type;
+		balance=bal;
+	}
+	
+	void deposit(){
+		System.out.println("Enter the ammount to deposit:");
+		Scanner sc=new Scanner(System.in);
+		
+		int amount=sc.nextInt();
+		if(balance>1000)
+			balance=balance+amount;
+		else
+			System.out.println("minimum balance should be 1000");
+	}
+	
+	void display(){
+		System.out.println("Name:"+name);
+		System.out.println("Balance in your account:"+balance);
+		System.out.println();
+	}
+}
+
+class main{
+	public static void main(String []ar){
+		account_details a1=new account_details("yagnesh",123456789,"Saving",2000);
+		
+		a1.deposit();		
+		a1.display();
+		
+		account_details a2=new account_details("yagnesh2",1234567810,"FD",900);
+		
+		a2.deposit();
+		a2.display();
+	}
+}
+
+// Que.2 (B) - 2
+
+class Area_Rectangle{
+	int len,br,hei;
+	Area_Rectangle(int l,int b,int h){
+		len=l;
+		br=b;
+		hei=h;
+	}
+	
+	Area_Rectangle(Area_Rectangle a){
+		len=a.len;
+		br=a.br;
+		hei=a.hei;
+	}
+	
+	int findArea(){
+		int area=len*br*hei;
+		return area;
+	}
+}
+
+class main{
+	public static void main(String a[]){
+		Area_Rectangle a1=new Area_Rectangle(10,20,30);
+		
+		Area_Rectangle a2=new Area_Rectangle(a1);
+		
+		int answer=a2.findArea();
+		
+		System.out.println("Area of Rectangle is:"+answer);
+	}
+}
+
+// Que. 3(C) - 1
+
+class PrimeNumbers
+{
+   public static void main (String[] args)
+   {		
+       int i =0;
+       int num =0;
+       //Empty String
+       String  primeNumbers = "";
+
+       for (i = 1; i <= 100; i++)         
+       { 		  	  
+          int counter=0; 	  
+          for(num =i; num>=1; num--)
+	  {
+             if(i%num==0)
+	     {
+ 		counter = counter + 1;
+	     }
+	  }
+	  if (counter ==2)
+	  {
+	    primeNumbers = primeNumbers + i + " ";
+	  }	
+       }	
+       System.out.println("Prime numbers from 1 to 100 are :");
+       System.out.println(primeNumbers);
+   }
+}
+
+// Que.3(C) - 2
+
+class fact{
+	public static void main(String []ar){
+		fact f=new fact();
+		int x=Integer.parseInt(ar[0]);
+		System.out.println(x);
+		int ans=factorial(x);
+		System.out.println(ans);
+	}
+	
+	int factorial(int x){
+		if(x==1){
+			return x;
+		}
+		else{
+			x=x*factorial(x-1);
+			return x;
+		}
+	}
+}
+
+// Que.4(B) - 1
+
+class superBase{
+	void display1(){
+		System.out.println("this is the super base class");
+	}
+}
+
+class base extends superBase{
+	void display2(){
+		System.out.println("this is sub class of superBase class");
+	}
+}
+
+class sub extends base{
+	void display3(){
+		System.out.println("this is the sub class of base class");
+	}
+}
+
+class main{
+	public static void main(String []ar){
+		sub s=new sub();
+		
+		s.dsipaly1();
+		s.display2();
+		s.display3();
+	}
+}
+
+// Que.4(B) - 2
+
+// superclass.java
+
+package overload;
+public clas superclass{
+	public void display(){
+		System.out.println("This is Super class");
+	}
+}
+
+// subclass.java
+
+import overload.*;
+class subclass extends superclass{
+	public void display(){
+		System.out.println("this is sub class");
+	}
+	
+	public static void main(String []ar){
+		superclass parent;
+		subclass child=new subclass();
+		child.display();
+		parent=child;
+		parent.display();
+	}
+}
+
+// Que. 4(C)
+
+class mythread extends Thread{
+	String msg;
+	int time;
+	mythread(String m,int t){
+		msg=m;
+		time=t;
+	}
+	
+	public void run(){
+		while(true){
+			System.out.println(msg);
+			try{
+				Thread.sleep(time);
+			}
+			catch(Exception e){
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	public static void main(String []aa){
+		mythread thread1=new mythread("Thread-1",2500);
+		mythread thread2=new mythread("Thread-2",5000);
+		mythread thread3=new mythread("Thread-3",7500);
+		thread1.start();
+		thread2.start();
+		thread3.start();
+	}
+}
+
+// Que.5(C)
+
+interface super1{
+	public static final int a=10;
+	public void display1();
+}
+
+interface super2{
+	public static final int b=30;
+	public void display2();
+}
+
+class subclass implements super1,super2{
+	int c;
+	public void display1(){
+		System.out.println("overridden method for super1 interface");
+	}
+	public void display2(){
+		System.out.println("Overridden method for super2 interface");
+	}
+	void display3(){
+		System.out.println("Method from sub class");
+		c=super1.a+super2.b;
+		System.out.println("Sum of the a and b from two super interfaces :"+c);
+	}
+}
+
+class main{
+	public static void main(String a[]){
+		subclass s=new subclass();
+		s.display1();
+		s.display2();
+		s.display3();
+	}
+}
+
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Winter 2016
+
+//Que. 2(D) - 1
+
+import java.util.Scanner;
+
+class reverseNumber{
+	public static void main(String []ar){
+		Scanner sc;
+		sc=new Scanner(System.in);
+		int number;
+		System.out.println("Enter the number you want to reverse");
+		number=sc.nextInt();
+		int reverse=rev(number);
+		System.out.println("Reverse of number:"+reverse);
+	}
+	
+	public static int rev(int number){
+		int reverse=0;
+		int remainder=0;
+		while(number>0){
+			remiander=number%10;
+			reverse=reverse*10+remainder;
+			number=number/10;
+		}
+		return reverse;
+	}
+}
+
+// Que. 2(D) - 2
+
+import java.util.Scanner;
+class PrimeNumbers2
+{
+   public static void main (String[] args)
+   {		
+      Scanner scanner = new Scanner(System.in);
+      int i =0;
+      int num =0;
+      //Empty String
+      String  primeNumbers = "";
+      System.out.println("Enter the value of n:");
+      int n = scanner.nextInt();
+      scanner.close();
+      for (i = 1; i <= n; i++)  	   
+      { 		 		  
+         int counter=0; 		  
+         for(num =i; num>=1; num--)
+         {
+	    if(i%num==0)
+	    {
+		counter = counter + 1;
+	    }
+	 }
+	 if (counter ==2)
+	 {
+	    //Appended the Prime number to the String
+	    primeNumbers = primeNumbers + i + " ";
+	 }	
+      }	
+      System.out.println("Prime numbers from 1 to n are :");
+      System.out.println(primeNumbers);
+   }
+}
+
+// Que. 3(D) - 1
+
+// practical file ma mali jase.
+
+// Que. 3(D) - 2
+
+class object_pass{
+	int a,b;
+	object_pass(int x,int y){
+		a=x;
+		b=y;
+	}
+	
+	void display(object_pass o){
+		System.out.println("value of variables of the passed object to this display function:-");
+		System.out.println("a="+o.a);
+		System.out.println("b="+o.b);
+	}
+
+}
+
+class main{
+	public static void main(String a[]){
+		object_pass o1=new object_pass(20,30);	
+		object_pass o2=new object_pass(10,20);	
+		
+		o1.display(o2);    //passing object as an argument
+	}
+}
+
+// Que. 4(C) 
+
+interface p1{
+	public static final int pi1=200;
+	public void display1();
+}
+
+interface p2{
+	public static final int pi2=100;
+	public void display2();
+}
+
+interface p12 extends p1,p2{
+	public static final int pi12=300;
+	public void display1();
+	public void display2();
+	public void display12();
+}
+
+class Q implements p12{
+	public void display1(){
+		System.out.println("overridden display for interface p1");
+		System.out.println("value of variable of interface p1:"+p1.pi1);
+	}
+	public void display2(){
+		System.out.println("overridden display for interface p2");
+		System.out.println("value of variable of interface p2:"+p2.pi2);
+	}
+	public void display12(){
+		System.out.println("overridden display for interface p12");
+		System.out.println("value of variable of interface p12:"+p12.pi12);
+	}
+	void displayQ(){
+		System.out.println("display method for the class Q");
+	}
+}
+
+class main{
+	public static void main(String ap[]){
+		Q q=new Q();
+		q.display1();
+		q.display2();
+		q.display12();
+		q.displayQ();
+	}
+}
+
+// Que. 5(C) and (D) pella mokalyu chhe ema avi gaya che.  

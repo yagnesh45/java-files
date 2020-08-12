@@ -1,0 +1,17 @@
+<student>
+	<std>
+		<name>yagnesh</name>
+		<age>18</age>
+		<city>surat</city>
+	</std>
+	<std>
+		<name>mitesh</name>
+		<age>18</age>
+		<city>valsad</city>
+	</std>
+	<std>
+		<name>keyur</name>
+		<age>18</age>
+		<city>vapi</city>
+	</std>
+</student>

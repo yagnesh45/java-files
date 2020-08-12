@@ -1,0 +1,23 @@
+<beans 
+	xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:aop = "http://www.springframework.org/schema/aop"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/aop
+   http://www.springframework.org/schema/aop/spring-aop-3.0.xsd"
+>
+
+<bean id="s1" class="com.aop.Student" >
+<property name="id" value="101"/>
+<property name="name" value="Yagnesh"/>
+</bean>
+<bean id="design" class="com.aop.Aspect1"/>
+<aop:config>
+	<aop:aspect id="aspect1" ref="design">
+		<aop:pointcut expression="execution(public * com.aop.Student.*(..))" id="pc"/>
+		<!-- <aop:pointcut expression="execution(public String com.aop.Student.toString())" id="pc"/>-->
+		<aop:before method="drawLine" pointcut-ref="pc"/>
+	</aop:aspect>
+</aop:config>
+</beans>

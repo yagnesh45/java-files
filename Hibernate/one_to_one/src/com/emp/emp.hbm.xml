@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+<hibernate-mapping>
+<class table="Emp" name="com.emp.Emp">
+<id name="no"/>
+<property name="name" />
+<property name="contact"/>
+<one-to-one name="salary" class="com.emp.Salary" cascade="all"/>
+</class>
+
+<class name="com.emp.Salary">
+<id name="no">
+	<generator class="foreign">
+		<param name="property">e</param>
+	</generator>
+</id>
+<property name="basic"/>
+<property name="bonus"/>
+<one-to-one name="e" class="com.emp.Emp" />
+</class>
+</hibernate-mapping>
